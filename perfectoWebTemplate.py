@@ -67,3 +67,6 @@ class TestWeb(unittest.TestCase):
 
     def tearDown(self):
         self.driver.quit()
+
+
+unittest.main()

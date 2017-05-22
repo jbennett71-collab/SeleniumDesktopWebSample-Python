@@ -96,3 +96,5 @@ class TestWeb(unittest.TestCase):
                                                               job=Job('JobName', 1),
                                                               project=Project('DesktopWeb', '0.1'))
         self.reporting_client = PerfectoReportiumClient(perfecto_execution_context)
+
+unittest.main()
