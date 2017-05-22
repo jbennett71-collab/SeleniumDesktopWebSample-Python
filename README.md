@@ -1,5 +1,7 @@
 # Python Web Automation Code Sample
 
+[![CircleCI](https://circleci.com/gh/PerfectoCode/SeleniumDesktopWebSample-Python.svg?style=shield)](https://circleci.com/gh/PerfectoCode/SeleniumDesktopWebSample-Python)
+
 This code sample demonstrates how to use Perfecto Web Machines & Selenium + Python programing language in order to execute tests 
 for your web applications on the cloud. 
 
