@@ -5,7 +5,7 @@ for your web applications on the cloud.
 
 ### Getting Stated: 
 - Clone or download the sample:<br/> `git clone https://github.com/PerfectoCode/SeleniumDesktopWebSample-Python.git`
-- Add your Perfecto Lab credentials within the [WebAppE2E.rb](PerfectoWebTemplate.rb) file:
+- Add your Perfecto Lab credentials within the one of the templates files:
 ```Python
 ...
 user = os.environ['user']
