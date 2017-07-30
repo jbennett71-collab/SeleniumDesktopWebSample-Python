@@ -65,8 +65,9 @@ class TestWeb(unittest.TestCase):
         :return: 
         """
         print 'Run started'
+        self.reporting_client.step_start("Navigate to google")
         self.driver.get('https://www.google.com')
-
+        self.reporting_client.step_end()
         ###########################
         # Complete your test here #
         ###########################

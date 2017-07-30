@@ -1,8 +1,7 @@
 import unittest, os
 from selenium import webdriver
 
-user = os.environ['user']
-password = os.environ['password']
+token = os.environ['token']
 host = os.environ['host']
 
 
@@ -18,8 +17,6 @@ class TestWeb(unittest.TestCase):
         :param args: 
         :param kwargs: 
         """
-        self.user = user
-        self.password = password
         self.host = host
         self.driver = None
         self.currentResult = None
@@ -37,8 +34,7 @@ class TestWeb(unittest.TestCase):
             'browserName': 'Chrome',
             'browserVersion': 'latest',
             'resolution': '1280x1024',
-            'user': self.user,
-            'password': self.password
+            'securityToken': token,
         }
 
         self.driver = webdriver.Remote('https://' + self.host + '/nexperience/perfectomobile/wd/hub', capabilities)
