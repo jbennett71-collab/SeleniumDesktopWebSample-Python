@@ -10,22 +10,36 @@ for your web applications on the cloud.
 - Add your Perfecto Lab credentials within the one of the templates files:
 ```Python
 ...
-user = os.environ['user']
-password = os.environ['password']
+token = os.environ['token']
 host = os.environ['host']
 ... 
 ```
-Note! you may want to use env variable for your credentials as demonstrated
+You may want to use env variable for your credentials as demonstrated.
 
-- Note:exclamation: the project include 4 templates: 
+Old school credentials may be used by replacing the security token with username and password (Not available for Turbo Web)
+```Python
+...
+user = os.environ['user']
+password = os.environ['password']
+...
+```
+:exclamation:Using old school credentials is not a best practice and is not recommended.
+
+- Note:exclamation: the project contain 2 templates:
     - perfectoFastWebTemplate: template for Perfecto Turbo Web.
     - perfectoFastWebTemplateReporting: template for Perfecto Turbo Web + DigitalZoom Reporting.
-    - perfectoWebTemplate: basic web automation template.
-    - perfectoWebTemplateReporting: same as the basic template + DigitalZoom Reporting.
-    
 - Run the project from your IDE or using command line for example `python PerfectoFastWebTemplate.py`
 
-### Web Capabilities: 
+:exclamation:For Non Turbo Web replace:
+```Python
+self.driver = webdriver.Remote('https://' + self.host + '/nexperience/perfectomobile/wd/hub/fast', capabilities)
+```
+with:
+```Python
+self.driver = webdriver.Remote('https://' + self.host + '/nexperience/perfectomobile/wd/hub', capabilities)
+```
+
+### Web Capabilities:
 
 - To insure your tests run on Perfecto Web machines on the cloud use the capabilities as demonstrated in the code sample: <br/>
 ```Python
@@ -40,11 +54,14 @@ Note! you may want to use env variable for your credentials as demonstrated
             'browserName': 'Chrome',
             'browserVersion': 'latest',
             'resolution': '1280x1024',
-            'user': self.user,
-            'password': self.password
+            'token': self.token
         }
 
-        self.driver = webdriver.Remote('https://' + self.host + '/nexperience/perfectomobile/wd/hub', capabilities)
+        # For old school credentials replace token with:
+        # 'user': self.user,
+        # 'password': self.password
+
+        self.driver = webdriver.Remote('https://' + self.host + '/nexperience/perfectomobile/wd/hub/fast', capabilities)
 ```
 
 - More capabilities are available, read more [here](http://developers.perfectomobile.com/display/PD/Supported+Platforms).

@@ -1,8 +1,7 @@
 import unittest, os
 from selenium import webdriver
 
-# Perfecto Turbo Web requires authentication token read more at:
-# http://developers.perfectomobile.com/display/PD/Turbo+Web+Automation
+# For more information regarding Perfecto Turbo Web solution please visit http://developers.perfectomobile.com/display/PD/Turbo+Web+Automation
 token = os.environ['token']
 host = os.environ['host']
 
@@ -36,11 +35,10 @@ class TestWeb(unittest.TestCase):
             'browserName': 'Chrome',
             'browserVersion': 'latest',
             'resolution': '1280x1024',
-            'securityToken': token,
+            'securityToken': self.token,
         }
 
-        # The project uses Perfecto Turbo Web, for more information follow the instructions at:
-        # http://developers.perfectomobile.com/display/PD/Turbo+Web+Automation
+        # For Regular web (physical devices) remove the '/fast' at the end of the Url
         self.driver = webdriver.Remote('https://' + self.host + '/nexperience/perfectomobile/wd/hub/fast', capabilities)
 
     def run(self, result=None):
