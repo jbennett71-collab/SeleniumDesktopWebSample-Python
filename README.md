@@ -4,7 +4,7 @@
 
 This code sample demonstrates how to use Perfecto Web Machines & Selenium + Python programing language in order to execute tests 
 for your web applications on the cloud.
-For more information regarding Turbo Web Solution please visit: http://developers.perfectomobile.com/display/PD/Automating+Web-apps+with+Perfecto
+For more information regarding Turbo Web Solution please visit [here](http://developers.perfectomobile.com/display/PD/Automating+Web-apps+with+Perfecto)
 
 ### Getting Stated: 
 - Clone or download the sample:<br/> `git clone https://github.com/PerfectoCode/SeleniumDesktopWebSample-Python.git`
