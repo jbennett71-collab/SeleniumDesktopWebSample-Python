@@ -1,7 +1,6 @@
 import unittest, os
 from selenium import webdriver
 
-# For more information regarding Perfecto Turbo Web solution please visit http://developers.perfectomobile.com/display/PD/Turbo+Web+Automation
 token = os.environ['token']
 host = os.environ['host']
 
@@ -38,7 +37,7 @@ class TestWeb(unittest.TestCase):
             'securityToken': self.token,
         }
 
-        # For Regular web (physical devices) remove the '/fast' at the end of the Url
+        # For Regular web (physical devices) remove the '/fast' at the end of the Url (Please check the README file for more information)
         self.driver = webdriver.Remote('https://' + self.host + '/nexperience/perfectomobile/wd/hub/fast', capabilities)
 
     def run(self, result=None):
