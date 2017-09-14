@@ -20,6 +20,7 @@ class TestWeb(unittest.TestCase):
         self.host = host
         self.driver = None
         self.currentResult = None
+		self.token = token
 
         super(TestWeb, self).__init__(*args, **kwargs)
 
