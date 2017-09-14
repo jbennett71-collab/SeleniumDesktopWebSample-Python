@@ -17,10 +17,8 @@ class TestWeb(unittest.TestCase):
         :param args: 
         :param kwargs: 
         """
-        self.host = host
         self.driver = None
         self.currentResult = None
-		self.token = token
 
         super(TestWeb, self).__init__(*args, **kwargs)
 
@@ -35,11 +33,11 @@ class TestWeb(unittest.TestCase):
             'browserName': 'Chrome',
             'browserVersion': 'latest',
             'resolution': '1280x1024',
-            'securityToken': self.token,
+            'securityToken': token,
         }
 
         # For Regular web (physical devices) remove the '/fast' at the end of the Url (Please check the README file for more information)
-        self.driver = webdriver.Remote('https://' + self.host + '/nexperience/perfectomobile/wd/hub/fast', capabilities)
+        self.driver = webdriver.Remote('https://' + host + '/nexperience/perfectomobile/wd/hub/fast', capabilities)
 
     def run(self, result=None):
         """
