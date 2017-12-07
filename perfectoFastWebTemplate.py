@@ -11,6 +11,7 @@ class TestWeb(unittest.TestCase):
     This project demonstrate simply how to open a Desktop Web
     machine within your Perfecto Lab in the cloud and running your tests
     """
+
     def __init__(self, *args, **kwargs):
         """
         Initialize test suite instance
@@ -64,4 +65,6 @@ class TestWeb(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
-unittest.main()
+
+if __name__ == "__main__":
+    unittest.main()
